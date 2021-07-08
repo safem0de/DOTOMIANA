@@ -36,9 +36,9 @@
             this.PicRadiant_Hero3 = new System.Windows.Forms.PictureBox();
             this.PicRadiant_Hero4 = new System.Windows.Forms.PictureBox();
             this.PicRadiant_Hero5 = new System.Windows.Forms.PictureBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.LblRadiantHeroes = new System.Windows.Forms.Label();
             this.CmbRadiantHero1 = new System.Windows.Forms.ComboBox();
-            this.label4 = new System.Windows.Forms.Label();
+            this.LblRadiantPlayers = new System.Windows.Forms.Label();
             this.CmbRadiantHero2 = new System.Windows.Forms.ComboBox();
             this.CmbRadiantPlayer1 = new System.Windows.Forms.ComboBox();
             this.CmbRadiantPlayer2 = new System.Windows.Forms.ComboBox();
@@ -50,24 +50,24 @@
             this.CmbRadiantPlayer5 = new System.Windows.Forms.ComboBox();
             this.GrbTheDire = new System.Windows.Forms.GroupBox();
             this.PicTheDire_Hero3 = new System.Windows.Forms.PictureBox();
-            this.comboBox12 = new System.Windows.Forms.ComboBox();
+            this.CmbTheDirePlayer5 = new System.Windows.Forms.ComboBox();
             this.LblTheDireTeam = new System.Windows.Forms.Label();
-            this.comboBox13 = new System.Windows.Forms.ComboBox();
+            this.CmbTheDireHero5 = new System.Windows.Forms.ComboBox();
             this.CmbTheDireTeam = new System.Windows.Forms.ComboBox();
-            this.comboBox15 = new System.Windows.Forms.ComboBox();
+            this.CmbTheDirePlayer4 = new System.Windows.Forms.ComboBox();
             this.PicTheDire_Hero1 = new System.Windows.Forms.PictureBox();
-            this.comboBox16 = new System.Windows.Forms.ComboBox();
+            this.CmbTheDireHero4 = new System.Windows.Forms.ComboBox();
             this.PicTheDire_Hero2 = new System.Windows.Forms.PictureBox();
-            this.comboBox17 = new System.Windows.Forms.ComboBox();
+            this.CmbTheDirePlayer3 = new System.Windows.Forms.ComboBox();
             this.PicTheDire_Hero4 = new System.Windows.Forms.PictureBox();
-            this.comboBox18 = new System.Windows.Forms.ComboBox();
+            this.CmbTheDireHero3 = new System.Windows.Forms.ComboBox();
             this.PicTheDire_Hero5 = new System.Windows.Forms.PictureBox();
-            this.comboBox19 = new System.Windows.Forms.ComboBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.comboBox20 = new System.Windows.Forms.ComboBox();
-            this.comboBox21 = new System.Windows.Forms.ComboBox();
-            this.comboBox22 = new System.Windows.Forms.ComboBox();
-            this.label6 = new System.Windows.Forms.Label();
+            this.CmbTheDirePlayer2 = new System.Windows.Forms.ComboBox();
+            this.LblTheDireHeroes = new System.Windows.Forms.Label();
+            this.CmbTheDirePlayer1 = new System.Windows.Forms.ComboBox();
+            this.CmbTheDireHero1 = new System.Windows.Forms.ComboBox();
+            this.CmbTheDireHero2 = new System.Windows.Forms.ComboBox();
+            this.LblTheDirePlayers = new System.Windows.Forms.Label();
             this.GrbRadiant.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PicRadiant_Hero1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PicRadiant_Hero2)).BeginInit();
@@ -98,11 +98,11 @@
             this.GrbRadiant.Controls.Add(this.CmbRadiantHero3);
             this.GrbRadiant.Controls.Add(this.PicRadiant_Hero5);
             this.GrbRadiant.Controls.Add(this.CmbRadiantPlayer2);
-            this.GrbRadiant.Controls.Add(this.label3);
+            this.GrbRadiant.Controls.Add(this.LblRadiantHeroes);
             this.GrbRadiant.Controls.Add(this.CmbRadiantPlayer1);
             this.GrbRadiant.Controls.Add(this.CmbRadiantHero1);
             this.GrbRadiant.Controls.Add(this.CmbRadiantHero2);
-            this.GrbRadiant.Controls.Add(this.label4);
+            this.GrbRadiant.Controls.Add(this.LblRadiantPlayers);
             this.GrbRadiant.Location = new System.Drawing.Point(12, 12);
             this.GrbRadiant.Name = "GrbRadiant";
             this.GrbRadiant.Size = new System.Drawing.Size(776, 221);
@@ -167,14 +167,14 @@
             this.PicRadiant_Hero5.TabIndex = 2;
             this.PicRadiant_Hero5.TabStop = false;
             // 
-            // label3
+            // LblRadiantHeroes
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(48, 171);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(47, 13);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Heroes :";
+            this.LblRadiantHeroes.AutoSize = true;
+            this.LblRadiantHeroes.Location = new System.Drawing.Point(48, 171);
+            this.LblRadiantHeroes.Name = "LblRadiantHeroes";
+            this.LblRadiantHeroes.Size = new System.Drawing.Size(47, 13);
+            this.LblRadiantHeroes.TabIndex = 3;
+            this.LblRadiantHeroes.Text = "Heroes :";
             // 
             // CmbRadiantHero1
             // 
@@ -184,14 +184,14 @@
             this.CmbRadiantHero1.Size = new System.Drawing.Size(121, 21);
             this.CmbRadiantHero1.TabIndex = 4;
             // 
-            // label4
+            // LblRadiantPlayers
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(48, 198);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(47, 13);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Players :";
+            this.LblRadiantPlayers.AutoSize = true;
+            this.LblRadiantPlayers.Location = new System.Drawing.Point(48, 198);
+            this.LblRadiantPlayers.Name = "LblRadiantPlayers";
+            this.LblRadiantPlayers.Size = new System.Drawing.Size(47, 13);
+            this.LblRadiantPlayers.TabIndex = 3;
+            this.LblRadiantPlayers.Text = "Players :";
             // 
             // CmbRadiantHero2
             // 
@@ -268,24 +268,24 @@
             // GrbTheDire
             // 
             this.GrbTheDire.Controls.Add(this.PicTheDire_Hero3);
-            this.GrbTheDire.Controls.Add(this.comboBox12);
+            this.GrbTheDire.Controls.Add(this.CmbTheDirePlayer5);
             this.GrbTheDire.Controls.Add(this.LblTheDireTeam);
-            this.GrbTheDire.Controls.Add(this.comboBox13);
+            this.GrbTheDire.Controls.Add(this.CmbTheDireHero5);
             this.GrbTheDire.Controls.Add(this.CmbTheDireTeam);
-            this.GrbTheDire.Controls.Add(this.comboBox15);
+            this.GrbTheDire.Controls.Add(this.CmbTheDirePlayer4);
             this.GrbTheDire.Controls.Add(this.PicTheDire_Hero1);
-            this.GrbTheDire.Controls.Add(this.comboBox16);
+            this.GrbTheDire.Controls.Add(this.CmbTheDireHero4);
             this.GrbTheDire.Controls.Add(this.PicTheDire_Hero2);
-            this.GrbTheDire.Controls.Add(this.comboBox17);
+            this.GrbTheDire.Controls.Add(this.CmbTheDirePlayer3);
             this.GrbTheDire.Controls.Add(this.PicTheDire_Hero4);
-            this.GrbTheDire.Controls.Add(this.comboBox18);
+            this.GrbTheDire.Controls.Add(this.CmbTheDireHero3);
             this.GrbTheDire.Controls.Add(this.PicTheDire_Hero5);
-            this.GrbTheDire.Controls.Add(this.comboBox19);
-            this.GrbTheDire.Controls.Add(this.label5);
-            this.GrbTheDire.Controls.Add(this.comboBox20);
-            this.GrbTheDire.Controls.Add(this.comboBox21);
-            this.GrbTheDire.Controls.Add(this.comboBox22);
-            this.GrbTheDire.Controls.Add(this.label6);
+            this.GrbTheDire.Controls.Add(this.CmbTheDirePlayer2);
+            this.GrbTheDire.Controls.Add(this.LblTheDireHeroes);
+            this.GrbTheDire.Controls.Add(this.CmbTheDirePlayer1);
+            this.GrbTheDire.Controls.Add(this.CmbTheDireHero1);
+            this.GrbTheDire.Controls.Add(this.CmbTheDireHero2);
+            this.GrbTheDire.Controls.Add(this.LblTheDirePlayers);
             this.GrbTheDire.Location = new System.Drawing.Point(12, 239);
             this.GrbTheDire.Name = "GrbTheDire";
             this.GrbTheDire.Size = new System.Drawing.Size(776, 221);
@@ -301,13 +301,13 @@
             this.PicTheDire_Hero3.TabIndex = 2;
             this.PicTheDire_Hero3.TabStop = false;
             // 
-            // comboBox12
+            // CmbTheDirePlayer5
             // 
-            this.comboBox12.FormattingEnabled = true;
-            this.comboBox12.Location = new System.Drawing.Point(609, 195);
-            this.comboBox12.Name = "comboBox12";
-            this.comboBox12.Size = new System.Drawing.Size(121, 21);
-            this.comboBox12.TabIndex = 4;
+            this.CmbTheDirePlayer5.FormattingEnabled = true;
+            this.CmbTheDirePlayer5.Location = new System.Drawing.Point(609, 195);
+            this.CmbTheDirePlayer5.Name = "CmbTheDirePlayer5";
+            this.CmbTheDirePlayer5.Size = new System.Drawing.Size(121, 21);
+            this.CmbTheDirePlayer5.TabIndex = 4;
             // 
             // LblTheDireTeam
             // 
@@ -318,13 +318,13 @@
             this.LblTheDireTeam.TabIndex = 0;
             this.LblTheDireTeam.Text = "Team :";
             // 
-            // comboBox13
+            // CmbTheDireHero5
             // 
-            this.comboBox13.FormattingEnabled = true;
-            this.comboBox13.Location = new System.Drawing.Point(609, 168);
-            this.comboBox13.Name = "comboBox13";
-            this.comboBox13.Size = new System.Drawing.Size(121, 21);
-            this.comboBox13.TabIndex = 4;
+            this.CmbTheDireHero5.FormattingEnabled = true;
+            this.CmbTheDireHero5.Location = new System.Drawing.Point(609, 168);
+            this.CmbTheDireHero5.Name = "CmbTheDireHero5";
+            this.CmbTheDireHero5.Size = new System.Drawing.Size(121, 21);
+            this.CmbTheDireHero5.TabIndex = 4;
             // 
             // CmbTheDireTeam
             // 
@@ -334,13 +334,13 @@
             this.CmbTheDireTeam.Size = new System.Drawing.Size(121, 21);
             this.CmbTheDireTeam.TabIndex = 1;
             // 
-            // comboBox15
+            // CmbTheDirePlayer4
             // 
-            this.comboBox15.FormattingEnabled = true;
-            this.comboBox15.Location = new System.Drawing.Point(482, 195);
-            this.comboBox15.Name = "comboBox15";
-            this.comboBox15.Size = new System.Drawing.Size(121, 21);
-            this.comboBox15.TabIndex = 4;
+            this.CmbTheDirePlayer4.FormattingEnabled = true;
+            this.CmbTheDirePlayer4.Location = new System.Drawing.Point(482, 195);
+            this.CmbTheDirePlayer4.Name = "CmbTheDirePlayer4";
+            this.CmbTheDirePlayer4.Size = new System.Drawing.Size(121, 21);
+            this.CmbTheDirePlayer4.TabIndex = 4;
             // 
             // PicTheDire_Hero1
             // 
@@ -350,13 +350,13 @@
             this.PicTheDire_Hero1.TabIndex = 2;
             this.PicTheDire_Hero1.TabStop = false;
             // 
-            // comboBox16
+            // CmbTheDireHero4
             // 
-            this.comboBox16.FormattingEnabled = true;
-            this.comboBox16.Location = new System.Drawing.Point(482, 168);
-            this.comboBox16.Name = "comboBox16";
-            this.comboBox16.Size = new System.Drawing.Size(121, 21);
-            this.comboBox16.TabIndex = 4;
+            this.CmbTheDireHero4.FormattingEnabled = true;
+            this.CmbTheDireHero4.Location = new System.Drawing.Point(482, 168);
+            this.CmbTheDireHero4.Name = "CmbTheDireHero4";
+            this.CmbTheDireHero4.Size = new System.Drawing.Size(121, 21);
+            this.CmbTheDireHero4.TabIndex = 4;
             // 
             // PicTheDire_Hero2
             // 
@@ -366,13 +366,13 @@
             this.PicTheDire_Hero2.TabIndex = 2;
             this.PicTheDire_Hero2.TabStop = false;
             // 
-            // comboBox17
+            // CmbTheDirePlayer3
             // 
-            this.comboBox17.FormattingEnabled = true;
-            this.comboBox17.Location = new System.Drawing.Point(355, 195);
-            this.comboBox17.Name = "comboBox17";
-            this.comboBox17.Size = new System.Drawing.Size(121, 21);
-            this.comboBox17.TabIndex = 4;
+            this.CmbTheDirePlayer3.FormattingEnabled = true;
+            this.CmbTheDirePlayer3.Location = new System.Drawing.Point(355, 195);
+            this.CmbTheDirePlayer3.Name = "CmbTheDirePlayer3";
+            this.CmbTheDirePlayer3.Size = new System.Drawing.Size(121, 21);
+            this.CmbTheDirePlayer3.TabIndex = 4;
             // 
             // PicTheDire_Hero4
             // 
@@ -382,13 +382,13 @@
             this.PicTheDire_Hero4.TabIndex = 2;
             this.PicTheDire_Hero4.TabStop = false;
             // 
-            // comboBox18
+            // CmbTheDireHero3
             // 
-            this.comboBox18.FormattingEnabled = true;
-            this.comboBox18.Location = new System.Drawing.Point(355, 168);
-            this.comboBox18.Name = "comboBox18";
-            this.comboBox18.Size = new System.Drawing.Size(121, 21);
-            this.comboBox18.TabIndex = 4;
+            this.CmbTheDireHero3.FormattingEnabled = true;
+            this.CmbTheDireHero3.Location = new System.Drawing.Point(355, 168);
+            this.CmbTheDireHero3.Name = "CmbTheDireHero3";
+            this.CmbTheDireHero3.Size = new System.Drawing.Size(121, 21);
+            this.CmbTheDireHero3.TabIndex = 4;
             // 
             // PicTheDire_Hero5
             // 
@@ -398,55 +398,55 @@
             this.PicTheDire_Hero5.TabIndex = 2;
             this.PicTheDire_Hero5.TabStop = false;
             // 
-            // comboBox19
+            // CmbTheDirePlayer2
             // 
-            this.comboBox19.FormattingEnabled = true;
-            this.comboBox19.Location = new System.Drawing.Point(228, 195);
-            this.comboBox19.Name = "comboBox19";
-            this.comboBox19.Size = new System.Drawing.Size(121, 21);
-            this.comboBox19.TabIndex = 4;
+            this.CmbTheDirePlayer2.FormattingEnabled = true;
+            this.CmbTheDirePlayer2.Location = new System.Drawing.Point(228, 195);
+            this.CmbTheDirePlayer2.Name = "CmbTheDirePlayer2";
+            this.CmbTheDirePlayer2.Size = new System.Drawing.Size(121, 21);
+            this.CmbTheDirePlayer2.TabIndex = 4;
             // 
-            // label5
+            // LblTheDireHeroes
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(48, 171);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(47, 13);
-            this.label5.TabIndex = 3;
-            this.label5.Text = "Heroes :";
+            this.LblTheDireHeroes.AutoSize = true;
+            this.LblTheDireHeroes.Location = new System.Drawing.Point(48, 171);
+            this.LblTheDireHeroes.Name = "LblTheDireHeroes";
+            this.LblTheDireHeroes.Size = new System.Drawing.Size(47, 13);
+            this.LblTheDireHeroes.TabIndex = 3;
+            this.LblTheDireHeroes.Text = "Heroes :";
             // 
-            // comboBox20
+            // CmbTheDirePlayer1
             // 
-            this.comboBox20.FormattingEnabled = true;
-            this.comboBox20.Location = new System.Drawing.Point(101, 195);
-            this.comboBox20.Name = "comboBox20";
-            this.comboBox20.Size = new System.Drawing.Size(121, 21);
-            this.comboBox20.TabIndex = 4;
+            this.CmbTheDirePlayer1.FormattingEnabled = true;
+            this.CmbTheDirePlayer1.Location = new System.Drawing.Point(101, 195);
+            this.CmbTheDirePlayer1.Name = "CmbTheDirePlayer1";
+            this.CmbTheDirePlayer1.Size = new System.Drawing.Size(121, 21);
+            this.CmbTheDirePlayer1.TabIndex = 4;
             // 
-            // comboBox21
+            // CmbTheDireHero1
             // 
-            this.comboBox21.FormattingEnabled = true;
-            this.comboBox21.Location = new System.Drawing.Point(101, 168);
-            this.comboBox21.Name = "comboBox21";
-            this.comboBox21.Size = new System.Drawing.Size(121, 21);
-            this.comboBox21.TabIndex = 4;
+            this.CmbTheDireHero1.FormattingEnabled = true;
+            this.CmbTheDireHero1.Location = new System.Drawing.Point(101, 168);
+            this.CmbTheDireHero1.Name = "CmbTheDireHero1";
+            this.CmbTheDireHero1.Size = new System.Drawing.Size(121, 21);
+            this.CmbTheDireHero1.TabIndex = 4;
             // 
-            // comboBox22
+            // CmbTheDireHero2
             // 
-            this.comboBox22.FormattingEnabled = true;
-            this.comboBox22.Location = new System.Drawing.Point(228, 168);
-            this.comboBox22.Name = "comboBox22";
-            this.comboBox22.Size = new System.Drawing.Size(121, 21);
-            this.comboBox22.TabIndex = 4;
+            this.CmbTheDireHero2.FormattingEnabled = true;
+            this.CmbTheDireHero2.Location = new System.Drawing.Point(228, 168);
+            this.CmbTheDireHero2.Name = "CmbTheDireHero2";
+            this.CmbTheDireHero2.Size = new System.Drawing.Size(121, 21);
+            this.CmbTheDireHero2.TabIndex = 4;
             // 
-            // label6
+            // LblTheDirePlayers
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(48, 198);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(47, 13);
-            this.label6.TabIndex = 3;
-            this.label6.Text = "Players :";
+            this.LblTheDirePlayers.AutoSize = true;
+            this.LblTheDirePlayers.Location = new System.Drawing.Point(48, 198);
+            this.LblTheDirePlayers.Name = "LblTheDirePlayers";
+            this.LblTheDirePlayers.Size = new System.Drawing.Size(47, 13);
+            this.LblTheDirePlayers.TabIndex = 3;
+            this.LblTheDirePlayers.Text = "Players :";
             // 
             // MainMenu
             // 
@@ -477,7 +477,6 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox GrbRadiant;
         private System.Windows.Forms.PictureBox PicRadiant_Hero3;
         private System.Windows.Forms.ComboBox CmbRadiantPlayer5;
@@ -493,31 +492,31 @@
         private System.Windows.Forms.ComboBox CmbRadiantHero3;
         private System.Windows.Forms.PictureBox PicRadiant_Hero5;
         private System.Windows.Forms.ComboBox CmbRadiantPlayer2;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label LblRadiantHeroes;
         private System.Windows.Forms.ComboBox CmbRadiantPlayer1;
         private System.Windows.Forms.ComboBox CmbRadiantHero1;
         private System.Windows.Forms.ComboBox CmbRadiantHero2;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label LblRadiantPlayers;
         private System.Windows.Forms.GroupBox GrbTheDire;
         private System.Windows.Forms.PictureBox PicTheDire_Hero3;
-        private System.Windows.Forms.ComboBox comboBox12;
+        private System.Windows.Forms.ComboBox CmbTheDirePlayer5;
         private System.Windows.Forms.Label LblTheDireTeam;
-        private System.Windows.Forms.ComboBox comboBox13;
+        private System.Windows.Forms.ComboBox CmbTheDireHero5;
         private System.Windows.Forms.ComboBox CmbTheDireTeam;
-        private System.Windows.Forms.ComboBox comboBox15;
+        private System.Windows.Forms.ComboBox CmbTheDirePlayer4;
         private System.Windows.Forms.PictureBox PicTheDire_Hero1;
-        private System.Windows.Forms.ComboBox comboBox16;
+        private System.Windows.Forms.ComboBox CmbTheDireHero4;
         private System.Windows.Forms.PictureBox PicTheDire_Hero2;
-        private System.Windows.Forms.ComboBox comboBox17;
+        private System.Windows.Forms.ComboBox CmbTheDirePlayer3;
         private System.Windows.Forms.PictureBox PicTheDire_Hero4;
-        private System.Windows.Forms.ComboBox comboBox18;
+        private System.Windows.Forms.ComboBox CmbTheDireHero3;
         private System.Windows.Forms.PictureBox PicTheDire_Hero5;
-        private System.Windows.Forms.ComboBox comboBox19;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ComboBox comboBox20;
-        private System.Windows.Forms.ComboBox comboBox21;
-        private System.Windows.Forms.ComboBox comboBox22;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.ComboBox CmbTheDirePlayer2;
+        private System.Windows.Forms.Label LblTheDireHeroes;
+        private System.Windows.Forms.ComboBox CmbTheDirePlayer1;
+        private System.Windows.Forms.ComboBox CmbTheDireHero1;
+        private System.Windows.Forms.ComboBox CmbTheDireHero2;
+        private System.Windows.Forms.Label LblTheDirePlayers;
     }
 }
 
