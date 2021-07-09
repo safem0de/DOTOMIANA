@@ -29,25 +29,25 @@
         private void InitializeComponent()
         {
             this.GrbRadiant = new System.Windows.Forms.GroupBox();
-            this.LblRadiantTeam = new System.Windows.Forms.Label();
-            this.CmbRadiantTeam = new System.Windows.Forms.ComboBox();
-            this.PicRadiant_Hero1 = new System.Windows.Forms.PictureBox();
-            this.PicRadiant_Hero2 = new System.Windows.Forms.PictureBox();
             this.PicRadiant_Hero3 = new System.Windows.Forms.PictureBox();
-            this.PicRadiant_Hero4 = new System.Windows.Forms.PictureBox();
-            this.PicRadiant_Hero5 = new System.Windows.Forms.PictureBox();
-            this.LblRadiantHeroes = new System.Windows.Forms.Label();
-            this.CmbRadiantHero1 = new System.Windows.Forms.ComboBox();
-            this.LblRadiantPlayers = new System.Windows.Forms.Label();
-            this.CmbRadiantHero2 = new System.Windows.Forms.ComboBox();
-            this.CmbRadiantPlayer1 = new System.Windows.Forms.ComboBox();
-            this.CmbRadiantPlayer2 = new System.Windows.Forms.ComboBox();
-            this.CmbRadiantHero3 = new System.Windows.Forms.ComboBox();
-            this.CmbRadiantPlayer3 = new System.Windows.Forms.ComboBox();
-            this.CmbRadiantHero4 = new System.Windows.Forms.ComboBox();
-            this.CmbRadiantPlayer4 = new System.Windows.Forms.ComboBox();
-            this.CmbRadiantHero5 = new System.Windows.Forms.ComboBox();
             this.CmbRadiantPlayer5 = new System.Windows.Forms.ComboBox();
+            this.LblRadiantTeam = new System.Windows.Forms.Label();
+            this.CmbRadiantHero5 = new System.Windows.Forms.ComboBox();
+            this.CmbRadiantTeam = new System.Windows.Forms.ComboBox();
+            this.CmbRadiantPlayer4 = new System.Windows.Forms.ComboBox();
+            this.PicRadiant_Hero1 = new System.Windows.Forms.PictureBox();
+            this.CmbRadiantHero4 = new System.Windows.Forms.ComboBox();
+            this.PicRadiant_Hero2 = new System.Windows.Forms.PictureBox();
+            this.CmbRadiantPlayer3 = new System.Windows.Forms.ComboBox();
+            this.PicRadiant_Hero4 = new System.Windows.Forms.PictureBox();
+            this.CmbRadiantHero3 = new System.Windows.Forms.ComboBox();
+            this.PicRadiant_Hero5 = new System.Windows.Forms.PictureBox();
+            this.CmbRadiantPlayer2 = new System.Windows.Forms.ComboBox();
+            this.LblRadiantHeroes = new System.Windows.Forms.Label();
+            this.CmbRadiantPlayer1 = new System.Windows.Forms.ComboBox();
+            this.CmbRadiantHero1 = new System.Windows.Forms.ComboBox();
+            this.CmbRadiantHero2 = new System.Windows.Forms.ComboBox();
+            this.LblRadiantPlayers = new System.Windows.Forms.Label();
             this.GrbTheDire = new System.Windows.Forms.GroupBox();
             this.PicTheDire_Hero3 = new System.Windows.Forms.PictureBox();
             this.CmbTheDirePlayer5 = new System.Windows.Forms.ComboBox();
@@ -69,9 +69,9 @@
             this.CmbTheDireHero2 = new System.Windows.Forms.ComboBox();
             this.LblTheDirePlayers = new System.Windows.Forms.Label();
             this.GrbRadiant.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PicRadiant_Hero3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PicRadiant_Hero1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PicRadiant_Hero2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PicRadiant_Hero3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PicRadiant_Hero4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PicRadiant_Hero5)).BeginInit();
             this.GrbTheDire.SuspendLayout();
@@ -106,9 +106,25 @@
             this.GrbRadiant.Location = new System.Drawing.Point(12, 12);
             this.GrbRadiant.Name = "GrbRadiant";
             this.GrbRadiant.Size = new System.Drawing.Size(776, 221);
-            this.GrbRadiant.TabIndex = 5;
+            this.GrbRadiant.TabIndex = 0;
             this.GrbRadiant.TabStop = false;
             this.GrbRadiant.Text = "Radiant";
+            // 
+            // PicRadiant_Hero3
+            // 
+            this.PicRadiant_Hero3.Location = new System.Drawing.Point(355, 40);
+            this.PicRadiant_Hero3.Name = "PicRadiant_Hero3";
+            this.PicRadiant_Hero3.Size = new System.Drawing.Size(121, 121);
+            this.PicRadiant_Hero3.TabIndex = 2;
+            this.PicRadiant_Hero3.TabStop = false;
+            // 
+            // CmbRadiantPlayer5
+            // 
+            this.CmbRadiantPlayer5.FormattingEnabled = true;
+            this.CmbRadiantPlayer5.Location = new System.Drawing.Point(609, 195);
+            this.CmbRadiantPlayer5.Name = "CmbRadiantPlayer5";
+            this.CmbRadiantPlayer5.Size = new System.Drawing.Size(121, 21);
+            this.CmbRadiantPlayer5.TabIndex = 4;
             // 
             // LblRadiantTeam
             // 
@@ -119,6 +135,14 @@
             this.LblRadiantTeam.TabIndex = 0;
             this.LblRadiantTeam.Text = "Team :";
             // 
+            // CmbRadiantHero5
+            // 
+            this.CmbRadiantHero5.FormattingEnabled = true;
+            this.CmbRadiantHero5.Location = new System.Drawing.Point(609, 168);
+            this.CmbRadiantHero5.Name = "CmbRadiantHero5";
+            this.CmbRadiantHero5.Size = new System.Drawing.Size(121, 21);
+            this.CmbRadiantHero5.TabIndex = 4;
+            // 
             // CmbRadiantTeam
             // 
             this.CmbRadiantTeam.FormattingEnabled = true;
@@ -126,6 +150,15 @@
             this.CmbRadiantTeam.Name = "CmbRadiantTeam";
             this.CmbRadiantTeam.Size = new System.Drawing.Size(121, 21);
             this.CmbRadiantTeam.TabIndex = 1;
+            this.CmbRadiantTeam.SelectedIndexChanged += new System.EventHandler(this.CmbRadiantTeam_SelectedIndexChanged);
+            // 
+            // CmbRadiantPlayer4
+            // 
+            this.CmbRadiantPlayer4.FormattingEnabled = true;
+            this.CmbRadiantPlayer4.Location = new System.Drawing.Point(482, 195);
+            this.CmbRadiantPlayer4.Name = "CmbRadiantPlayer4";
+            this.CmbRadiantPlayer4.Size = new System.Drawing.Size(121, 21);
+            this.CmbRadiantPlayer4.TabIndex = 4;
             // 
             // PicRadiant_Hero1
             // 
@@ -135,6 +168,14 @@
             this.PicRadiant_Hero1.TabIndex = 2;
             this.PicRadiant_Hero1.TabStop = false;
             // 
+            // CmbRadiantHero4
+            // 
+            this.CmbRadiantHero4.FormattingEnabled = true;
+            this.CmbRadiantHero4.Location = new System.Drawing.Point(482, 168);
+            this.CmbRadiantHero4.Name = "CmbRadiantHero4";
+            this.CmbRadiantHero4.Size = new System.Drawing.Size(121, 21);
+            this.CmbRadiantHero4.TabIndex = 4;
+            // 
             // PicRadiant_Hero2
             // 
             this.PicRadiant_Hero2.Location = new System.Drawing.Point(228, 40);
@@ -143,13 +184,13 @@
             this.PicRadiant_Hero2.TabIndex = 2;
             this.PicRadiant_Hero2.TabStop = false;
             // 
-            // PicRadiant_Hero3
+            // CmbRadiantPlayer3
             // 
-            this.PicRadiant_Hero3.Location = new System.Drawing.Point(355, 40);
-            this.PicRadiant_Hero3.Name = "PicRadiant_Hero3";
-            this.PicRadiant_Hero3.Size = new System.Drawing.Size(121, 121);
-            this.PicRadiant_Hero3.TabIndex = 2;
-            this.PicRadiant_Hero3.TabStop = false;
+            this.CmbRadiantPlayer3.FormattingEnabled = true;
+            this.CmbRadiantPlayer3.Location = new System.Drawing.Point(355, 195);
+            this.CmbRadiantPlayer3.Name = "CmbRadiantPlayer3";
+            this.CmbRadiantPlayer3.Size = new System.Drawing.Size(121, 21);
+            this.CmbRadiantPlayer3.TabIndex = 4;
             // 
             // PicRadiant_Hero4
             // 
@@ -159,6 +200,14 @@
             this.PicRadiant_Hero4.TabIndex = 2;
             this.PicRadiant_Hero4.TabStop = false;
             // 
+            // CmbRadiantHero3
+            // 
+            this.CmbRadiantHero3.FormattingEnabled = true;
+            this.CmbRadiantHero3.Location = new System.Drawing.Point(355, 168);
+            this.CmbRadiantHero3.Name = "CmbRadiantHero3";
+            this.CmbRadiantHero3.Size = new System.Drawing.Size(121, 21);
+            this.CmbRadiantHero3.TabIndex = 4;
+            // 
             // PicRadiant_Hero5
             // 
             this.PicRadiant_Hero5.Location = new System.Drawing.Point(609, 40);
@@ -166,6 +215,14 @@
             this.PicRadiant_Hero5.Size = new System.Drawing.Size(121, 121);
             this.PicRadiant_Hero5.TabIndex = 2;
             this.PicRadiant_Hero5.TabStop = false;
+            // 
+            // CmbRadiantPlayer2
+            // 
+            this.CmbRadiantPlayer2.FormattingEnabled = true;
+            this.CmbRadiantPlayer2.Location = new System.Drawing.Point(228, 195);
+            this.CmbRadiantPlayer2.Name = "CmbRadiantPlayer2";
+            this.CmbRadiantPlayer2.Size = new System.Drawing.Size(121, 21);
+            this.CmbRadiantPlayer2.TabIndex = 4;
             // 
             // LblRadiantHeroes
             // 
@@ -176,6 +233,14 @@
             this.LblRadiantHeroes.TabIndex = 3;
             this.LblRadiantHeroes.Text = "Heroes :";
             // 
+            // CmbRadiantPlayer1
+            // 
+            this.CmbRadiantPlayer1.FormattingEnabled = true;
+            this.CmbRadiantPlayer1.Location = new System.Drawing.Point(101, 195);
+            this.CmbRadiantPlayer1.Name = "CmbRadiantPlayer1";
+            this.CmbRadiantPlayer1.Size = new System.Drawing.Size(121, 21);
+            this.CmbRadiantPlayer1.TabIndex = 4;
+            // 
             // CmbRadiantHero1
             // 
             this.CmbRadiantHero1.FormattingEnabled = true;
@@ -183,15 +248,7 @@
             this.CmbRadiantHero1.Name = "CmbRadiantHero1";
             this.CmbRadiantHero1.Size = new System.Drawing.Size(121, 21);
             this.CmbRadiantHero1.TabIndex = 4;
-            // 
-            // LblRadiantPlayers
-            // 
-            this.LblRadiantPlayers.AutoSize = true;
-            this.LblRadiantPlayers.Location = new System.Drawing.Point(48, 198);
-            this.LblRadiantPlayers.Name = "LblRadiantPlayers";
-            this.LblRadiantPlayers.Size = new System.Drawing.Size(47, 13);
-            this.LblRadiantPlayers.TabIndex = 3;
-            this.LblRadiantPlayers.Text = "Players :";
+            this.CmbRadiantHero1.SelectedIndexChanged += new System.EventHandler(this.CmbRadiantHero1_SelectedIndexChanged);
             // 
             // CmbRadiantHero2
             // 
@@ -201,69 +258,14 @@
             this.CmbRadiantHero2.Size = new System.Drawing.Size(121, 21);
             this.CmbRadiantHero2.TabIndex = 4;
             // 
-            // CmbRadiantPlayer1
+            // LblRadiantPlayers
             // 
-            this.CmbRadiantPlayer1.FormattingEnabled = true;
-            this.CmbRadiantPlayer1.Location = new System.Drawing.Point(101, 195);
-            this.CmbRadiantPlayer1.Name = "CmbRadiantPlayer1";
-            this.CmbRadiantPlayer1.Size = new System.Drawing.Size(121, 21);
-            this.CmbRadiantPlayer1.TabIndex = 4;
-            // 
-            // CmbRadiantPlayer2
-            // 
-            this.CmbRadiantPlayer2.FormattingEnabled = true;
-            this.CmbRadiantPlayer2.Location = new System.Drawing.Point(228, 195);
-            this.CmbRadiantPlayer2.Name = "CmbRadiantPlayer2";
-            this.CmbRadiantPlayer2.Size = new System.Drawing.Size(121, 21);
-            this.CmbRadiantPlayer2.TabIndex = 4;
-            // 
-            // CmbRadiantHero3
-            // 
-            this.CmbRadiantHero3.FormattingEnabled = true;
-            this.CmbRadiantHero3.Location = new System.Drawing.Point(355, 168);
-            this.CmbRadiantHero3.Name = "CmbRadiantHero3";
-            this.CmbRadiantHero3.Size = new System.Drawing.Size(121, 21);
-            this.CmbRadiantHero3.TabIndex = 4;
-            // 
-            // CmbRadiantPlayer3
-            // 
-            this.CmbRadiantPlayer3.FormattingEnabled = true;
-            this.CmbRadiantPlayer3.Location = new System.Drawing.Point(355, 195);
-            this.CmbRadiantPlayer3.Name = "CmbRadiantPlayer3";
-            this.CmbRadiantPlayer3.Size = new System.Drawing.Size(121, 21);
-            this.CmbRadiantPlayer3.TabIndex = 4;
-            // 
-            // CmbRadiantHero4
-            // 
-            this.CmbRadiantHero4.FormattingEnabled = true;
-            this.CmbRadiantHero4.Location = new System.Drawing.Point(482, 168);
-            this.CmbRadiantHero4.Name = "CmbRadiantHero4";
-            this.CmbRadiantHero4.Size = new System.Drawing.Size(121, 21);
-            this.CmbRadiantHero4.TabIndex = 4;
-            // 
-            // CmbRadiantPlayer4
-            // 
-            this.CmbRadiantPlayer4.FormattingEnabled = true;
-            this.CmbRadiantPlayer4.Location = new System.Drawing.Point(482, 195);
-            this.CmbRadiantPlayer4.Name = "CmbRadiantPlayer4";
-            this.CmbRadiantPlayer4.Size = new System.Drawing.Size(121, 21);
-            this.CmbRadiantPlayer4.TabIndex = 4;
-            // 
-            // CmbRadiantHero5
-            // 
-            this.CmbRadiantHero5.FormattingEnabled = true;
-            this.CmbRadiantHero5.Location = new System.Drawing.Point(609, 168);
-            this.CmbRadiantHero5.Name = "CmbRadiantHero5";
-            this.CmbRadiantHero5.Size = new System.Drawing.Size(121, 21);
-            this.CmbRadiantHero5.TabIndex = 4;
-            // 
-            // CmbRadiantPlayer5
-            // 
-            this.CmbRadiantPlayer5.FormattingEnabled = true;
-            this.CmbRadiantPlayer5.Location = new System.Drawing.Point(609, 195);
-            this.CmbRadiantPlayer5.Name = "CmbRadiantPlayer5";
-            this.CmbRadiantPlayer5.Size = new System.Drawing.Size(121, 21);
-            this.CmbRadiantPlayer5.TabIndex = 4;
+            this.LblRadiantPlayers.AutoSize = true;
+            this.LblRadiantPlayers.Location = new System.Drawing.Point(48, 198);
+            this.LblRadiantPlayers.Name = "LblRadiantPlayers";
+            this.LblRadiantPlayers.Size = new System.Drawing.Size(47, 13);
+            this.LblRadiantPlayers.TabIndex = 3;
+            this.LblRadiantPlayers.Text = "Players :";
             // 
             // GrbTheDire
             // 
@@ -289,7 +291,7 @@
             this.GrbTheDire.Location = new System.Drawing.Point(12, 239);
             this.GrbTheDire.Name = "GrbTheDire";
             this.GrbTheDire.Size = new System.Drawing.Size(776, 221);
-            this.GrbTheDire.TabIndex = 5;
+            this.GrbTheDire.TabIndex = 0;
             this.GrbTheDire.TabStop = false;
             this.GrbTheDire.Text = "The Dire";
             // 
@@ -459,9 +461,9 @@
             this.Text = "DOTO MANIA by Safem0de";
             this.GrbRadiant.ResumeLayout(false);
             this.GrbRadiant.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PicRadiant_Hero3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PicRadiant_Hero1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PicRadiant_Hero2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PicRadiant_Hero3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PicRadiant_Hero4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PicRadiant_Hero5)).EndInit();
             this.GrbTheDire.ResumeLayout(false);

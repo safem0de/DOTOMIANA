@@ -57,6 +57,8 @@
       <DependentUpon>MainMenu.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\Heroes.cs" />
+    <Compile Include="Models\Players.cs" />
+    <Compile Include="Models\Teams.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="MainMenu.resx">
