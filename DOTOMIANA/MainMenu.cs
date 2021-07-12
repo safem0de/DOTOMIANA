@@ -60,44 +60,80 @@ namespace DOTOMIANA
                 MessageBox.Show(selectedValue.ToString()+" : This Team Not Available to Select");
             }
         }
-
+        
         private void CmbRadiantHero1_SelectedIndexChanged(object sender, System.EventArgs e)
         {
-            ComboBox cmb = (ComboBox)sender;
-            int selectedValue = (int)cmb.SelectedValue;
-            var x = new MainMenuManager();
-            var Hero = CmbRadiantHero1.Text.ToString().ToLower();
-            var URL = "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/" + Hero + ".png";
-            var Bool = x.checkURLImg(URL);
-
-            PicRadiant_Hero1.Image = null;
-            PicRadiant_Hero1.SizeMode = PictureBoxSizeMode.Zoom;
-
-            //MessageBox.Show(Hero.ToString());
-
-            if (Bool is false)
-            {
-                Hero = Hero.Replace(" ", "_").Replace("-", "");
-                URL = "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/" + Hero + ".png";
-                Bool = x.checkURLImg(URL);
-                if (Bool is true)
-                {
-                    //MessageBox.Show(y.ToString());
-                }
-                else
-                {
-                    if (Hero.Contains("fiend")) {
-                        Hero = "nevermore";
-                        URL = "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/" + Hero + ".png";
-                    }
-                    else
-                    {
-                        MessageBox.Show("Not Found Hero Image");
-                    }
-                }
-            }
-            //MessageBox.Show(URL);
-            PicRadiant_Hero1.Load(URL);
+            //if (CmbRadiantHero1.SelectedIndex > 0)
+            //{
+            //    var Hero = CmbRadiantHero1.Text.Replace("-","").Replace(" ","_").ToString().ToLower();
+            //    //MessageBox.Show(Hero);
+            //    switch (Hero)
+            //    {
+            //        case "shadow_fiend":
+            //            Hero = "nevermore";
+            //            break;
+            //        case "queen_of_pain":
+            //            Hero = "queenofpain";
+            //            break;
+            //        case "vengeful_spirit":
+            //            Hero = "vengefulspirit";
+            //            break;
+            //        case "windranger":
+            //            Hero = "windrunner";
+            //            break;
+            //        case "zeus":
+            //            Hero = "zuus";
+            //            break;
+            //        case "necrophos":
+            //            Hero = "necrolyte";
+            //            break;
+            //        case "wraith_king":
+            //            Hero = "skeleton_king";
+            //            break;
+            //        case "nature's_prophet":
+            //            Hero = "furion";
+            //            break;
+            //        case "clockwerk":
+            //            Hero = "rattletrap";
+            //            break;
+            //        case "io":
+            //            Hero = "wisp";
+            //            break;
+            //        case "lifestealer":
+            //            Hero = "life_stealer";
+            //            break;
+            //        case "doom":
+            //            Hero = "doom_bringer";
+            //            break; 
+            //        case "outworld_destroyer":
+            //            Hero = "obsidian_destroyer";
+            //            break;
+            //        case "treant_protector":
+            //            Hero = "treant";
+            //            break;
+            //        case "centaur_warrunner":
+            //            Hero = "centaur";
+            //            break;
+            //        case "magnus":
+            //            Hero = "magnataur";
+            //            break;
+            //        case "timbersaw":
+            //            Hero = "shredder";
+            //            break;
+            //        case "underlord":
+            //            Hero = "abyssal_underlord";
+            //            break;
+            //    }
+            //    string URL = "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/"+Hero+".png";
+            //    PicRadiant_Hero1.ImageLocation = URL;
+            //    PicRadiant_Hero1.SizeMode = PictureBoxSizeMode.Zoom;
+            //}
+            //else
+            //{
+            //    PicRadiant_Hero1.Image = null;
+            //    PicRadiant_Hero1.Refresh();
+            //}
+            
         }
     }
 }

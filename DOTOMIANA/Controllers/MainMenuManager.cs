@@ -39,25 +39,6 @@ namespace DOTOMIANA.Controllers
             comboBox.ValueMember = "Key";
         }
 
-        public Boolean checkURLImg(string URL)
-        {
-            HttpWebRequest request = (HttpWebRequest)HttpWebRequest.Create(URL);
-            request.Method = "HEAD";
-
-            bool exists;
-            try
-            {
-                request.GetResponse();
-                exists = true;
-            }
-            catch
-            {
-                exists = false;
-            }
-
-            return exists;
-        }
-
         public void addComboBoxTeam(ComboBox comboBox)
         {
         //https://stackoverflow.com/questions/17461367/can-linq-foreach-have-if-statement/17461394
@@ -67,46 +48,12 @@ namespace DOTOMIANA.Controllers
             item.Add(0, "Pls. Select Team");
             var getData = webGetMethod(URL);
             var result = JsonConvert.DeserializeObject<List<Teams>>(getData);
-            //result.ForEach(x => { MessageBox.Show(x.team_id.ToString(),x.name); });
-            //result.Where(x => !x.name.Equals("")).ToList()
-            //    .ForEach(x => { MessageBox.Show(x.team_id.ToString(), x.name); });
+
             result.Where(x => !x.name.Equals("")).ToList()
                 .ForEach(x => {
                     item.Add(x.team_id, x.name);
                 });
 
-            //List<int> keyList = new List<int>(item.Keys);
-
-            //foreach (int entry in keyList)
-            //{
-            //    // do something with entry.Value or entry.Key
-            //    //MessageBox.Show(entry.Key.ToString() + " : " + entry.Value);
-            //    string URL2 = "https://api.opendota.com/api/teams/"+entry.ToString()+"/players";
-            //    MessageBox.Show(URL2);
-            //    var getData2 = webGetMethod(URL2);
-            //    var result2 = JsonConvert.DeserializeObject<List<Players>>(getData2, settings);
-            //    var count = 0;
-            //    result2.Where(y => !String.IsNullOrEmpty(y.name) &&
-            //                        !y.name.Equals("")).ToList()
-            //        .ForEach(y =>
-            //        {
-            //            if (y.is_current_team_member)
-            //            {
-            //            //MessageBox.Show(y.account_id.ToString() + " : " + x.name + " : " + y.is_current_team_member);
-            //            count++;
-            //            }
-
-            //            if (count < 5)
-            //            {
-            //                //MessageBox.Show(x.name +" : "+ count.ToString());
-            //                item.Remove(entry);
-            //            }
-            //        });
-            //}
-
-            //comboBox.DataSource = new BindingSource(item, null);
-            //comboBox.DisplayMember = "Value";
-            //comboBox.ValueMember = "Key";
             addComboBox(comboBox, item);
 
         }
@@ -122,10 +69,7 @@ namespace DOTOMIANA.Controllers
                 item.Add(x.id, x.localized_name);
             });
 
-            comboBox.DataSource = new BindingSource(item, null);
-            comboBox.DisplayMember = "Value";
-            comboBox.ValueMember = "Key";
-            //addComboBox(comboBox, item);
+            addComboBox(comboBox, item);
         }
 
         public Dictionary<int,string> checkTeamAvailable(int team_id)
@@ -150,11 +94,84 @@ namespace DOTOMIANA.Controllers
                 {
                     if (y.is_current_team_member)
                     {
-                        //MessageBox.Show(y.account_id.ToString() + " : " + x.name + " : " + y.is_current_team_member);
                         item.Add(y.account_id, y.name);
                     }
                 });
             return item;
+        }
+
+        public void getImagefromComboBox(ComboBox cmb,PictureBox pic)
+        {
+            if (cmb.SelectedIndex > 0)
+            {
+                var Hero = cmb.Text.Replace("-", "").Replace(" ", "_").ToString().ToLower();
+                //MessageBox.Show(Hero);
+                switch (Hero)
+                {
+                    case "shadow_fiend":
+                        Hero = "nevermore";
+                        break;
+                    case "queen_of_pain":
+                        Hero = "queenofpain";
+                        break;
+                    case "vengeful_spirit":
+                        Hero = "vengefulspirit";
+                        break;
+                    case "windranger":
+                        Hero = "windrunner";
+                        break;
+                    case "zeus":
+                        Hero = "zuus";
+                        break;
+                    case "necrophos":
+                        Hero = "necrolyte";
+                        break;
+                    case "wraith_king":
+                        Hero = "skeleton_king";
+                        break;
+                    case "nature's_prophet":
+                        Hero = "furion";
+                        break;
+                    case "clockwerk":
+                        Hero = "rattletrap";
+                        break;
+                    case "io":
+                        Hero = "wisp";
+                        break;
+                    case "lifestealer":
+                        Hero = "life_stealer";
+                        break;
+                    case "doom":
+                        Hero = "doom_bringer";
+                        break;
+                    case "outworld_destroyer":
+                        Hero = "obsidian_destroyer";
+                        break;
+                    case "treant_protector":
+                        Hero = "treant";
+                        break;
+                    case "centaur_warrunner":
+                        Hero = "centaur";
+                        break;
+                    case "magnus":
+                        Hero = "magnataur";
+                        break;
+                    case "timbersaw":
+                        Hero = "shredder";
+                        break;
+                    case "underlord":
+                        Hero = "abyssal_underlord";
+                        break;
+                }
+                string URL = "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/" + Hero + ".png";
+                pic.ImageLocation = URL;
+                pic.SizeMode = PictureBoxSizeMode.Zoom;
+            }
+            else
+            {
+                pic.Image = null;
+                pic.Refresh();
+            }
         }
     }
 }
