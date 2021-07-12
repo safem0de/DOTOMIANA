@@ -25,10 +25,17 @@ namespace DOTOMIANA.Controllers
             request.Proxy.Credentials = System.Net.CredentialCache.DefaultCredentials;
             request.ContentType = "application/x-www-form-urlencoded";
 
-            WebResponse response = request.GetResponse();
-            StreamReader sr = new StreamReader(response.GetResponseStream());
-            jsonString = sr.ReadToEnd();
-            sr.Close();
+            try
+            {
+                WebResponse response = request.GetResponse();
+                StreamReader sr = new StreamReader(response.GetResponseStream());
+                jsonString = sr.ReadToEnd();
+                sr.Close();
+            }catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
             return jsonString;
         }
 
@@ -47,29 +54,45 @@ namespace DOTOMIANA.Controllers
             var item = new Dictionary<int, string>();
             item.Add(0, "Pls. Select Team");
             var getData = webGetMethod(URL);
+
             var result = JsonConvert.DeserializeObject<List<Teams>>(getData);
 
-            result.Where(x => !x.name.Equals("")).ToList()
+            if (result != null)
+            {
+                result.Where(x => !x.name.Equals("")).ToList()
                 .ForEach(x => {
                     item.Add(x.team_id, x.name);
                 });
 
-            addComboBox(comboBox, item);
+                addComboBox(comboBox, item);
+            }
 
         }
 
         public void addToComboBoxHeroes(ComboBox comboBox)
         {
+            var settings = new JsonSerializerSettings
+            {
+                //https://stackoverflow.com/questions/31813055/how-to-handle-null-empty-values-in-jsonconvert-deserializeobject
+                NullValueHandling = NullValueHandling.Ignore,
+                MissingMemberHandling = MissingMemberHandling.Ignore
+            };
+
             string URL = "https://api.opendota.com/api/heroes";
             var getData = webGetMethod(URL);
-            var result = JsonConvert.DeserializeObject<List<Heroes>>(getData);
+            var result = JsonConvert.DeserializeObject<List<Heroes>>(getData,settings);
             var item = new Dictionary<int, string>();
             item.Add(0, "Pls. Select Hero");
-            result.ForEach(x => {
-                item.Add(x.id, x.localized_name);
-            });
 
-            addComboBox(comboBox, item);
+            if (result != null)
+            {
+                result.ForEach(x => {
+                    item.Add(x.id, x.localized_name);
+                });
+
+                addComboBox(comboBox, item);
+            }
+            
         }
 
         public Dictionary<int,string> checkTeamAvailable(int team_id)
@@ -171,6 +194,69 @@ namespace DOTOMIANA.Controllers
             {
                 pic.Image = null;
                 pic.Refresh();
+            }
+        }
+
+        public void checkDuplicateHero(ComboBox[] Rad,ComboBox[] Dire,int HeroNum, bool RadiantSide)
+        {
+            int x = HeroNum - 1;
+            if (RadiantSide == true)
+            {
+                for (int i = 0; i < Rad.Length; i++)
+                {
+                    if (i != x)
+                    {
+                        if (Rad[x].SelectedIndex > 0 && Rad[i].SelectedIndex > 0)
+                        {
+                            if (Rad[x].Text.Equals(Rad[i].Text))
+                            {
+                                MessageBox.Show(Rad[x].Text + " Already Pick");
+                                Rad[x].SelectedIndex = 0;
+                            }
+                        }
+                    }
+                }
+
+                for (int i = 0; i < Dire.Length; i++)
+                {
+                    if (Rad[x].SelectedIndex > 0 && Dire[i].SelectedIndex > 0)
+                    {
+                        if (Rad[x].Text.Equals(Dire[i].Text))
+                        {
+                            MessageBox.Show(Rad[x].Text + " Already Pick");
+                            Rad[x].SelectedIndex = 0;
+                        }
+                    }
+                }
+            }
+            else
+            {
+                for (int i = 0; i < Dire.Length; i++)
+                {
+                    if (i != x)
+                    {
+                        if (Dire[x].SelectedIndex > 0 && Dire[i].SelectedIndex > 0)
+                        {
+                            if (Dire[x].Text.Equals(Dire[i].Text))
+                            {
+                                MessageBox.Show(Dire[x].Text + " Already Pick");
+                                Dire[x].SelectedIndex = 0;
+                            }
+                        }
+                    }
+                }
+
+                for (int i = 0; i < Rad.Length; i++)
+                {
+                    if (Dire[x].SelectedIndex > 0 && Rad[i].SelectedIndex > 0)
+                    {
+                        if (Dire[x].Text.Equals(Rad[i].Text))
+                        {
+                            MessageBox.Show(Dire[x].Text + " Already Pick");
+                            Dire[x].SelectedIndex = 0;
+                        }
+                    }
+                }
             }
         }
     }

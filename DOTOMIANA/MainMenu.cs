@@ -6,10 +6,11 @@ namespace DOTOMIANA
 {
     public partial class MainMenu : Form
     {
+        MainMenuManager a = new MainMenuManager();
         public MainMenu()
         {
             InitializeComponent();
-            MainMenuManager a = new MainMenuManager();
+            //MainMenuManager a = new MainMenuManager();
             a.addToComboBoxHeroes(CmbRadiantHero1);
             a.addToComboBoxHeroes(CmbRadiantHero2);
             a.addToComboBoxHeroes(CmbRadiantHero3);
@@ -33,16 +34,16 @@ namespace DOTOMIANA
             int selectedValue = (int)cmb.SelectedValue;
             //MessageBox.Show(selectedValue.ToString());
             
-            MainMenuManager b = new MainMenuManager();
-            var item = b.checkTeamAvailable(selectedValue);
+            //MainMenuManager b = new MainMenuManager();
+            var item = a.checkTeamAvailable(selectedValue);
 
             if (item.Count > 1)
             {
-                b.addComboBox(CmbRadiantPlayer1, item);
-                b.addComboBox(CmbRadiantPlayer2, item);
-                b.addComboBox(CmbRadiantPlayer3, item);
-                b.addComboBox(CmbRadiantPlayer4, item);
-                b.addComboBox(CmbRadiantPlayer5, item);
+                a.addComboBox(CmbRadiantPlayer1, item);
+                a.addComboBox(CmbRadiantPlayer2, item);
+                a.addComboBox(CmbRadiantPlayer3, item);
+                a.addComboBox(CmbRadiantPlayer4, item);
+                a.addComboBox(CmbRadiantPlayer5, item);
             }
             else
             {
@@ -63,77 +64,86 @@ namespace DOTOMIANA
         
         private void CmbRadiantHero1_SelectedIndexChanged(object sender, System.EventArgs e)
         {
-            //if (CmbRadiantHero1.SelectedIndex > 0)
-            //{
-            //    var Hero = CmbRadiantHero1.Text.Replace("-","").Replace(" ","_").ToString().ToLower();
-            //    //MessageBox.Show(Hero);
-            //    switch (Hero)
-            //    {
-            //        case "shadow_fiend":
-            //            Hero = "nevermore";
-            //            break;
-            //        case "queen_of_pain":
-            //            Hero = "queenofpain";
-            //            break;
-            //        case "vengeful_spirit":
-            //            Hero = "vengefulspirit";
-            //            break;
-            //        case "windranger":
-            //            Hero = "windrunner";
-            //            break;
-            //        case "zeus":
-            //            Hero = "zuus";
-            //            break;
-            //        case "necrophos":
-            //            Hero = "necrolyte";
-            //            break;
-            //        case "wraith_king":
-            //            Hero = "skeleton_king";
-            //            break;
-            //        case "nature's_prophet":
-            //            Hero = "furion";
-            //            break;
-            //        case "clockwerk":
-            //            Hero = "rattletrap";
-            //            break;
-            //        case "io":
-            //            Hero = "wisp";
-            //            break;
-            //        case "lifestealer":
-            //            Hero = "life_stealer";
-            //            break;
-            //        case "doom":
-            //            Hero = "doom_bringer";
-            //            break; 
-            //        case "outworld_destroyer":
-            //            Hero = "obsidian_destroyer";
-            //            break;
-            //        case "treant_protector":
-            //            Hero = "treant";
-            //            break;
-            //        case "centaur_warrunner":
-            //            Hero = "centaur";
-            //            break;
-            //        case "magnus":
-            //            Hero = "magnataur";
-            //            break;
-            //        case "timbersaw":
-            //            Hero = "shredder";
-            //            break;
-            //        case "underlord":
-            //            Hero = "abyssal_underlord";
-            //            break;
-            //    }
-            //    string URL = "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/"+Hero+".png";
-            //    PicRadiant_Hero1.ImageLocation = URL;
-            //    PicRadiant_Hero1.SizeMode = PictureBoxSizeMode.Zoom;
-            //}
-            //else
-            //{
-            //    PicRadiant_Hero1.Image = null;
-            //    PicRadiant_Hero1.Refresh();
-            //}
-            
+            //MainMenuManager a = new MainMenuManager();
+            a.getImagefromComboBox(CmbRadiantHero1, PicRadiant_Hero1);
+            ComboBox[] Rad = { CmbRadiantHero1, CmbRadiantHero2, CmbRadiantHero3, CmbRadiantHero4, CmbRadiantHero5 };
+            ComboBox[] Dire = { CmbTheDireHero1, CmbTheDireHero2, CmbTheDireHero3, CmbTheDireHero4, CmbTheDireHero5 };
+            a.checkDuplicateHero(Rad, Dire, 1, true);
+        }
+
+        private void CmbRadiantHero2_SelectedIndexChanged(object sender, System.EventArgs e)
+        {
+            //MainMenuManager a = new MainMenuManager();
+            a.getImagefromComboBox(CmbRadiantHero2, PicRadiant_Hero2);
+
+            ComboBox[] Rad = { CmbRadiantHero1, CmbRadiantHero2, CmbRadiantHero3, CmbRadiantHero4, CmbRadiantHero5 };
+            ComboBox[] Dire = { CmbTheDireHero1, CmbTheDireHero2, CmbTheDireHero3, CmbTheDireHero4, CmbTheDireHero5 };
+            a.checkDuplicateHero(Rad, Dire, 2, true);
+
+        }
+
+        private void CmbRadiantHero3_SelectedIndexChanged(object sender, System.EventArgs e)
+        {
+            a.getImagefromComboBox(CmbRadiantHero3, PicRadiant_Hero3);
+            ComboBox[] Rad = { CmbRadiantHero1, CmbRadiantHero2, CmbRadiantHero3, CmbRadiantHero4, CmbRadiantHero5 };
+            ComboBox[] Dire = { CmbTheDireHero1, CmbTheDireHero2, CmbTheDireHero3, CmbTheDireHero4, CmbTheDireHero5 };
+            a.checkDuplicateHero(Rad, Dire, 3, true);
+        }
+
+        private void CmbRadiantHero4_SelectedIndexChanged(object sender, System.EventArgs e)
+        {
+            a.getImagefromComboBox(CmbRadiantHero4, PicRadiant_Hero4);
+            ComboBox[] Rad = { CmbRadiantHero1, CmbRadiantHero2, CmbRadiantHero3, CmbRadiantHero4, CmbRadiantHero5 };
+            ComboBox[] Dire = { CmbTheDireHero1, CmbTheDireHero2, CmbTheDireHero3, CmbTheDireHero4, CmbTheDireHero5 };
+            a.checkDuplicateHero(Rad, Dire, 4, true);
+        }
+
+        private void CmbRadiantHero5_SelectedIndexChanged(object sender, System.EventArgs e)
+        {
+            a.getImagefromComboBox(CmbRadiantHero5, PicRadiant_Hero5);
+            ComboBox[] Rad = { CmbRadiantHero1, CmbRadiantHero2, CmbRadiantHero3, CmbRadiantHero4, CmbRadiantHero5 };
+            ComboBox[] Dire = { CmbTheDireHero1, CmbTheDireHero2, CmbTheDireHero3, CmbTheDireHero4, CmbTheDireHero5 };
+            a.checkDuplicateHero(Rad, Dire, 5, true);
+        }
+
+        private void CmbTheDireHero1_SelectedIndexChanged(object sender, System.EventArgs e)
+        {
+            a.getImagefromComboBox(CmbTheDireHero1, PicTheDire_Hero1);
+            ComboBox[] Rad = { CmbRadiantHero1, CmbRadiantHero2, CmbRadiantHero3, CmbRadiantHero4, CmbRadiantHero5 };
+            ComboBox[] Dire = { CmbTheDireHero1, CmbTheDireHero2, CmbTheDireHero3, CmbTheDireHero4, CmbTheDireHero5 };
+            a.checkDuplicateHero(Rad, Dire, 1, false);
+        }
+
+        private void CmbTheDireHero2_SelectedIndexChanged(object sender, System.EventArgs e)
+        {
+            a.getImagefromComboBox(CmbTheDireHero2, PicTheDire_Hero2);
+            ComboBox[] Rad = { CmbRadiantHero1, CmbRadiantHero2, CmbRadiantHero3, CmbRadiantHero4, CmbRadiantHero5 };
+            ComboBox[] Dire = { CmbTheDireHero1, CmbTheDireHero2, CmbTheDireHero3, CmbTheDireHero4, CmbTheDireHero5 };
+            a.checkDuplicateHero(Rad, Dire, 2, false);
+        }
+
+        private void CmbTheDireHero3_SelectedIndexChanged(object sender, System.EventArgs e)
+        {
+            a.getImagefromComboBox(CmbTheDireHero3, PicTheDire_Hero3);
+            ComboBox[] Rad = { CmbRadiantHero1, CmbRadiantHero2, CmbRadiantHero3, CmbRadiantHero4, CmbRadiantHero5 };
+            ComboBox[] Dire = { CmbTheDireHero1, CmbTheDireHero2, CmbTheDireHero3, CmbTheDireHero4, CmbTheDireHero5 };
+            a.checkDuplicateHero(Rad, Dire, 3, false);
+        }
+
+        private void CmbTheDireHero4_SelectedIndexChanged(object sender, System.EventArgs e)
+        {
+            a.getImagefromComboBox(CmbTheDireHero4, PicTheDire_Hero4);
+            ComboBox[] Rad = { CmbRadiantHero1, CmbRadiantHero2, CmbRadiantHero3, CmbRadiantHero4, CmbRadiantHero5 };
+            ComboBox[] Dire = { CmbTheDireHero1, CmbTheDireHero2, CmbTheDireHero3, CmbTheDireHero4, CmbTheDireHero5 };
+            a.checkDuplicateHero(Rad, Dire, 4, false);
+        }
+
+        private void CmbTheDireHero5_SelectedIndexChanged(object sender, System.EventArgs e)
+        {
+            a.getImagefromComboBox(CmbTheDireHero5, PicTheDire_Hero5);
+            ComboBox[] Rad = { CmbRadiantHero1, CmbRadiantHero2, CmbRadiantHero3, CmbRadiantHero4, CmbRadiantHero5 };
+            ComboBox[] Dire = { CmbTheDireHero1, CmbTheDireHero2, CmbTheDireHero3, CmbTheDireHero4, CmbTheDireHero5 };
+            a.checkDuplicateHero(Rad, Dire, 5, false);
         }
     }
 }
