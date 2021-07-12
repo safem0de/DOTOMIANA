@@ -340,6 +340,7 @@
             this.CmbTheDireTeam.Name = "CmbTheDireTeam";
             this.CmbTheDireTeam.Size = new System.Drawing.Size(121, 21);
             this.CmbTheDireTeam.TabIndex = 1;
+            this.CmbTheDireTeam.SelectedIndexChanged += new System.EventHandler(this.CmbTheDireTeam_SelectedIndexChanged);
             // 
             // CmbTheDirePlayer4
             // 

@@ -60,6 +60,13 @@ namespace DOTOMIANA
                 CmbRadiantPlayer5.Items.Clear();
                 MessageBox.Show(selectedValue.ToString()+" : This Team Not Available to Select");
             }
+
+            if (CmbRadiantTeam.SelectedIndex > 0 && CmbTheDireTeam.SelectedIndex > 0)
+            {
+                if (CmbRadiantTeam.Text.Equals(CmbTheDireTeam.Text)){
+                    MessageBox.Show("Team : "+ CmbTheDireTeam.Text +" was Selected (The Dire)");
+                }
+            }
         }
         
         private void CmbRadiantHero1_SelectedIndexChanged(object sender, System.EventArgs e)
@@ -144,6 +151,38 @@ namespace DOTOMIANA
             ComboBox[] Rad = { CmbRadiantHero1, CmbRadiantHero2, CmbRadiantHero3, CmbRadiantHero4, CmbRadiantHero5 };
             ComboBox[] Dire = { CmbTheDireHero1, CmbTheDireHero2, CmbTheDireHero3, CmbTheDireHero4, CmbTheDireHero5 };
             a.checkDuplicateHero(Rad, Dire, 5, false);
+        }
+
+        private void CmbTheDireTeam_SelectedIndexChanged(object sender, System.EventArgs e)
+        {
+            ComboBox cmb = (ComboBox)sender;
+            int selectedValue = (int)cmb.SelectedValue;
+
+            var item = a.checkTeamAvailable(selectedValue);
+
+            if (item.Count > 1)
+            {
+                a.addComboBox(CmbTheDirePlayer1, item);
+                a.addComboBox(CmbTheDirePlayer2, item);
+                a.addComboBox(CmbTheDirePlayer3, item);
+                a.addComboBox(CmbTheDirePlayer4, item);
+                a.addComboBox(CmbTheDirePlayer5, item);
+            }
+            else
+            {
+                CmbTheDireTeam.SelectedIndex = 0;
+                CmbTheDirePlayer1.DataSource = null;
+                CmbTheDirePlayer2.DataSource = null;
+                CmbTheDirePlayer3.DataSource = null;
+                CmbTheDirePlayer4.DataSource = null;
+                CmbTheDirePlayer5.DataSource = null;
+                CmbTheDirePlayer1.Items.Clear();
+                CmbTheDirePlayer2.Items.Clear();
+                CmbTheDirePlayer3.Items.Clear();
+                CmbTheDirePlayer4.Items.Clear();
+                CmbTheDirePlayer5.Items.Clear();
+                MessageBox.Show(selectedValue.ToString() + " : This Team Not Available to Select");
+            }
         }
     }
 }
