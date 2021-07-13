@@ -201,5 +201,65 @@ namespace DOTOMIANA
                 }
             }
         }
+
+        private void CmbRadiantPlayer1_SelectedIndexChanged(object sender, System.EventArgs e)
+        {
+            ComboBox[] Rad_Pl = { CmbRadiantPlayer1, CmbRadiantPlayer2, CmbRadiantPlayer3, CmbRadiantPlayer4, CmbRadiantPlayer5 };
+            a.checkPlayerDuplicate(Rad_Pl, 1);
+        }
+
+        private void CmbRadiantPlayer2_SelectedIndexChanged(object sender, System.EventArgs e)
+        {
+            ComboBox[] Rad_Pl = { CmbRadiantPlayer1, CmbRadiantPlayer2, CmbRadiantPlayer3, CmbRadiantPlayer4, CmbRadiantPlayer5 };
+            a.checkPlayerDuplicate(Rad_Pl, 2);
+        }
+
+        private void CmbRadiantPlayer3_SelectedIndexChanged(object sender, System.EventArgs e)
+        {
+            ComboBox[] Rad_Pl = { CmbRadiantPlayer1, CmbRadiantPlayer2, CmbRadiantPlayer3, CmbRadiantPlayer4, CmbRadiantPlayer5 };
+            a.checkPlayerDuplicate(Rad_Pl, 3);
+        }
+
+        private void CmbRadiantPlayer4_SelectedIndexChanged(object sender, System.EventArgs e)
+        {
+            ComboBox[] Rad_Pl = { CmbRadiantPlayer1, CmbRadiantPlayer2, CmbRadiantPlayer3, CmbRadiantPlayer4, CmbRadiantPlayer5 };
+            a.checkPlayerDuplicate(Rad_Pl, 4);
+        }
+
+        private void CmbRadiantPlayer5_SelectedIndexChanged(object sender, System.EventArgs e)
+        {
+            ComboBox[] Rad_Pl = { CmbRadiantPlayer1, CmbRadiantPlayer2, CmbRadiantPlayer3, CmbRadiantPlayer4, CmbRadiantPlayer5 };
+            a.checkPlayerDuplicate(Rad_Pl, 5);
+        }
+
+        private void CmbTheDirePlayer1_SelectedIndexChanged(object sender, System.EventArgs e)
+        {
+            ComboBox[] Dire_Pl = { CmbTheDirePlayer1, CmbTheDirePlayer2, CmbTheDirePlayer3, CmbTheDirePlayer4, CmbTheDirePlayer5 };
+            a.checkPlayerDuplicate(Dire_Pl, 1);
+        }
+
+        private void CmbTheDirePlayer2_SelectedIndexChanged(object sender, System.EventArgs e)
+        {
+            ComboBox[] Dire_Pl = { CmbTheDirePlayer1, CmbTheDirePlayer2, CmbTheDirePlayer3, CmbTheDirePlayer4, CmbTheDirePlayer5 };
+            a.checkPlayerDuplicate(Dire_Pl, 2);
+        }
+
+        private void CmbTheDirePlayer3_SelectedIndexChanged(object sender, System.EventArgs e)
+        {
+            ComboBox[] Dire_Pl = { CmbTheDirePlayer1, CmbTheDirePlayer2, CmbTheDirePlayer3, CmbTheDirePlayer4, CmbTheDirePlayer5 };
+            a.checkPlayerDuplicate(Dire_Pl, 3);
+        }
+
+        private void CmbTheDirePlayer4_SelectedIndexChanged(object sender, System.EventArgs e)
+        {
+            ComboBox[] Dire_Pl = { CmbTheDirePlayer1, CmbTheDirePlayer2, CmbTheDirePlayer3, CmbTheDirePlayer4, CmbTheDirePlayer5 };
+            a.checkPlayerDuplicate(Dire_Pl, 4);
+        }
+
+        private void CmbTheDirePlayer5_SelectedIndexChanged(object sender, System.EventArgs e)
+        {
+            ComboBox[] Dire_Pl = { CmbTheDirePlayer1, CmbTheDirePlayer2, CmbTheDirePlayer3, CmbTheDirePlayer4, CmbTheDirePlayer5 };
+            a.checkPlayerDuplicate(Dire_Pl, 5);
+        }
     }
 }

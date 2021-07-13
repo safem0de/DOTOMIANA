@@ -124,7 +124,8 @@
             this.CmbRadiantPlayer5.Location = new System.Drawing.Point(609, 195);
             this.CmbRadiantPlayer5.Name = "CmbRadiantPlayer5";
             this.CmbRadiantPlayer5.Size = new System.Drawing.Size(121, 21);
-            this.CmbRadiantPlayer5.TabIndex = 4;
+            this.CmbRadiantPlayer5.TabIndex = 11;
+            this.CmbRadiantPlayer5.SelectedIndexChanged += new System.EventHandler(this.CmbRadiantPlayer5_SelectedIndexChanged);
             // 
             // LblRadiantTeam
             // 
@@ -141,7 +142,7 @@
             this.CmbRadiantHero5.Location = new System.Drawing.Point(609, 168);
             this.CmbRadiantHero5.Name = "CmbRadiantHero5";
             this.CmbRadiantHero5.Size = new System.Drawing.Size(121, 21);
-            this.CmbRadiantHero5.TabIndex = 4;
+            this.CmbRadiantHero5.TabIndex = 6;
             this.CmbRadiantHero5.SelectedIndexChanged += new System.EventHandler(this.CmbRadiantHero5_SelectedIndexChanged);
             // 
             // CmbRadiantTeam
@@ -159,7 +160,8 @@
             this.CmbRadiantPlayer4.Location = new System.Drawing.Point(482, 195);
             this.CmbRadiantPlayer4.Name = "CmbRadiantPlayer4";
             this.CmbRadiantPlayer4.Size = new System.Drawing.Size(121, 21);
-            this.CmbRadiantPlayer4.TabIndex = 4;
+            this.CmbRadiantPlayer4.TabIndex = 10;
+            this.CmbRadiantPlayer4.SelectedIndexChanged += new System.EventHandler(this.CmbRadiantPlayer4_SelectedIndexChanged);
             // 
             // PicRadiant_Hero1
             // 
@@ -175,7 +177,7 @@
             this.CmbRadiantHero4.Location = new System.Drawing.Point(482, 168);
             this.CmbRadiantHero4.Name = "CmbRadiantHero4";
             this.CmbRadiantHero4.Size = new System.Drawing.Size(121, 21);
-            this.CmbRadiantHero4.TabIndex = 4;
+            this.CmbRadiantHero4.TabIndex = 5;
             this.CmbRadiantHero4.SelectedIndexChanged += new System.EventHandler(this.CmbRadiantHero4_SelectedIndexChanged);
             // 
             // PicRadiant_Hero2
@@ -192,7 +194,8 @@
             this.CmbRadiantPlayer3.Location = new System.Drawing.Point(355, 195);
             this.CmbRadiantPlayer3.Name = "CmbRadiantPlayer3";
             this.CmbRadiantPlayer3.Size = new System.Drawing.Size(121, 21);
-            this.CmbRadiantPlayer3.TabIndex = 4;
+            this.CmbRadiantPlayer3.TabIndex = 9;
+            this.CmbRadiantPlayer3.SelectedIndexChanged += new System.EventHandler(this.CmbRadiantPlayer3_SelectedIndexChanged);
             // 
             // PicRadiant_Hero4
             // 
@@ -225,7 +228,8 @@
             this.CmbRadiantPlayer2.Location = new System.Drawing.Point(228, 195);
             this.CmbRadiantPlayer2.Name = "CmbRadiantPlayer2";
             this.CmbRadiantPlayer2.Size = new System.Drawing.Size(121, 21);
-            this.CmbRadiantPlayer2.TabIndex = 4;
+            this.CmbRadiantPlayer2.TabIndex = 8;
+            this.CmbRadiantPlayer2.SelectedIndexChanged += new System.EventHandler(this.CmbRadiantPlayer2_SelectedIndexChanged);
             // 
             // LblRadiantHeroes
             // 
@@ -242,7 +246,8 @@
             this.CmbRadiantPlayer1.Location = new System.Drawing.Point(101, 195);
             this.CmbRadiantPlayer1.Name = "CmbRadiantPlayer1";
             this.CmbRadiantPlayer1.Size = new System.Drawing.Size(121, 21);
-            this.CmbRadiantPlayer1.TabIndex = 4;
+            this.CmbRadiantPlayer1.TabIndex = 7;
+            this.CmbRadiantPlayer1.SelectedIndexChanged += new System.EventHandler(this.CmbRadiantPlayer1_SelectedIndexChanged);
             // 
             // CmbRadiantHero1
             // 
@@ -250,7 +255,7 @@
             this.CmbRadiantHero1.Location = new System.Drawing.Point(101, 168);
             this.CmbRadiantHero1.Name = "CmbRadiantHero1";
             this.CmbRadiantHero1.Size = new System.Drawing.Size(121, 21);
-            this.CmbRadiantHero1.TabIndex = 4;
+            this.CmbRadiantHero1.TabIndex = 2;
             this.CmbRadiantHero1.SelectedIndexChanged += new System.EventHandler(this.CmbRadiantHero1_SelectedIndexChanged);
             // 
             // CmbRadiantHero2
@@ -259,7 +264,7 @@
             this.CmbRadiantHero2.Location = new System.Drawing.Point(228, 168);
             this.CmbRadiantHero2.Name = "CmbRadiantHero2";
             this.CmbRadiantHero2.Size = new System.Drawing.Size(121, 21);
-            this.CmbRadiantHero2.TabIndex = 4;
+            this.CmbRadiantHero2.TabIndex = 3;
             this.CmbRadiantHero2.SelectedIndexChanged += new System.EventHandler(this.CmbRadiantHero2_SelectedIndexChanged);
             // 
             // LblRadiantPlayers
@@ -313,7 +318,8 @@
             this.CmbTheDirePlayer5.Location = new System.Drawing.Point(609, 195);
             this.CmbTheDirePlayer5.Name = "CmbTheDirePlayer5";
             this.CmbTheDirePlayer5.Size = new System.Drawing.Size(121, 21);
-            this.CmbTheDirePlayer5.TabIndex = 4;
+            this.CmbTheDirePlayer5.TabIndex = 22;
+            this.CmbTheDirePlayer5.SelectedIndexChanged += new System.EventHandler(this.CmbTheDirePlayer5_SelectedIndexChanged);
             // 
             // LblTheDireTeam
             // 
@@ -330,7 +336,7 @@
             this.CmbTheDireHero5.Location = new System.Drawing.Point(609, 168);
             this.CmbTheDireHero5.Name = "CmbTheDireHero5";
             this.CmbTheDireHero5.Size = new System.Drawing.Size(121, 21);
-            this.CmbTheDireHero5.TabIndex = 4;
+            this.CmbTheDireHero5.TabIndex = 17;
             this.CmbTheDireHero5.SelectedIndexChanged += new System.EventHandler(this.CmbTheDireHero5_SelectedIndexChanged);
             // 
             // CmbTheDireTeam
@@ -339,7 +345,7 @@
             this.CmbTheDireTeam.Location = new System.Drawing.Point(101, 12);
             this.CmbTheDireTeam.Name = "CmbTheDireTeam";
             this.CmbTheDireTeam.Size = new System.Drawing.Size(121, 21);
-            this.CmbTheDireTeam.TabIndex = 1;
+            this.CmbTheDireTeam.TabIndex = 12;
             this.CmbTheDireTeam.SelectedIndexChanged += new System.EventHandler(this.CmbTheDireTeam_SelectedIndexChanged);
             // 
             // CmbTheDirePlayer4
@@ -348,7 +354,8 @@
             this.CmbTheDirePlayer4.Location = new System.Drawing.Point(482, 195);
             this.CmbTheDirePlayer4.Name = "CmbTheDirePlayer4";
             this.CmbTheDirePlayer4.Size = new System.Drawing.Size(121, 21);
-            this.CmbTheDirePlayer4.TabIndex = 4;
+            this.CmbTheDirePlayer4.TabIndex = 21;
+            this.CmbTheDirePlayer4.SelectedIndexChanged += new System.EventHandler(this.CmbTheDirePlayer4_SelectedIndexChanged);
             // 
             // PicTheDire_Hero1
             // 
@@ -364,7 +371,7 @@
             this.CmbTheDireHero4.Location = new System.Drawing.Point(482, 168);
             this.CmbTheDireHero4.Name = "CmbTheDireHero4";
             this.CmbTheDireHero4.Size = new System.Drawing.Size(121, 21);
-            this.CmbTheDireHero4.TabIndex = 4;
+            this.CmbTheDireHero4.TabIndex = 16;
             this.CmbTheDireHero4.SelectedIndexChanged += new System.EventHandler(this.CmbTheDireHero4_SelectedIndexChanged);
             // 
             // PicTheDire_Hero2
@@ -381,7 +388,8 @@
             this.CmbTheDirePlayer3.Location = new System.Drawing.Point(355, 195);
             this.CmbTheDirePlayer3.Name = "CmbTheDirePlayer3";
             this.CmbTheDirePlayer3.Size = new System.Drawing.Size(121, 21);
-            this.CmbTheDirePlayer3.TabIndex = 4;
+            this.CmbTheDirePlayer3.TabIndex = 20;
+            this.CmbTheDirePlayer3.SelectedIndexChanged += new System.EventHandler(this.CmbTheDirePlayer3_SelectedIndexChanged);
             // 
             // PicTheDire_Hero4
             // 
@@ -397,7 +405,7 @@
             this.CmbTheDireHero3.Location = new System.Drawing.Point(355, 168);
             this.CmbTheDireHero3.Name = "CmbTheDireHero3";
             this.CmbTheDireHero3.Size = new System.Drawing.Size(121, 21);
-            this.CmbTheDireHero3.TabIndex = 4;
+            this.CmbTheDireHero3.TabIndex = 15;
             this.CmbTheDireHero3.SelectedIndexChanged += new System.EventHandler(this.CmbTheDireHero3_SelectedIndexChanged);
             // 
             // PicTheDire_Hero5
@@ -414,7 +422,8 @@
             this.CmbTheDirePlayer2.Location = new System.Drawing.Point(228, 195);
             this.CmbTheDirePlayer2.Name = "CmbTheDirePlayer2";
             this.CmbTheDirePlayer2.Size = new System.Drawing.Size(121, 21);
-            this.CmbTheDirePlayer2.TabIndex = 4;
+            this.CmbTheDirePlayer2.TabIndex = 19;
+            this.CmbTheDirePlayer2.SelectedIndexChanged += new System.EventHandler(this.CmbTheDirePlayer2_SelectedIndexChanged);
             // 
             // LblTheDireHeroes
             // 
@@ -431,7 +440,8 @@
             this.CmbTheDirePlayer1.Location = new System.Drawing.Point(101, 195);
             this.CmbTheDirePlayer1.Name = "CmbTheDirePlayer1";
             this.CmbTheDirePlayer1.Size = new System.Drawing.Size(121, 21);
-            this.CmbTheDirePlayer1.TabIndex = 4;
+            this.CmbTheDirePlayer1.TabIndex = 18;
+            this.CmbTheDirePlayer1.SelectedIndexChanged += new System.EventHandler(this.CmbTheDirePlayer1_SelectedIndexChanged);
             // 
             // CmbTheDireHero1
             // 
@@ -439,7 +449,7 @@
             this.CmbTheDireHero1.Location = new System.Drawing.Point(101, 168);
             this.CmbTheDireHero1.Name = "CmbTheDireHero1";
             this.CmbTheDireHero1.Size = new System.Drawing.Size(121, 21);
-            this.CmbTheDireHero1.TabIndex = 4;
+            this.CmbTheDireHero1.TabIndex = 13;
             this.CmbTheDireHero1.SelectedIndexChanged += new System.EventHandler(this.CmbTheDireHero1_SelectedIndexChanged);
             // 
             // CmbTheDireHero2
@@ -448,7 +458,7 @@
             this.CmbTheDireHero2.Location = new System.Drawing.Point(228, 168);
             this.CmbTheDireHero2.Name = "CmbTheDireHero2";
             this.CmbTheDireHero2.Size = new System.Drawing.Size(121, 21);
-            this.CmbTheDireHero2.TabIndex = 4;
+            this.CmbTheDireHero2.TabIndex = 14;
             this.CmbTheDireHero2.SelectedIndexChanged += new System.EventHandler(this.CmbTheDireHero2_SelectedIndexChanged);
             // 
             // LblTheDirePlayers

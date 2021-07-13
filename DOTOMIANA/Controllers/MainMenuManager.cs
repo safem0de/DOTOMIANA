@@ -261,6 +261,23 @@ namespace DOTOMIANA.Controllers
             }
         }
 
-
+        public void checkPlayerDuplicate(ComboBox[] cmb, int PlayerNum)
+        {
+            int x = PlayerNum - 1;
+            for (int i = 0; i < cmb.Length; i++)
+            {
+                if (i != x)
+                {
+                    if (cmb[x].SelectedIndex > 0 && cmb[i].SelectedIndex > 0)
+                    {
+                        if (cmb[x].Text.Equals(cmb[i].Text))
+                        {
+                            MessageBox.Show(cmb[x].Text + " Already Pick");
+                            cmb[x].SelectedIndex = 0;
+                        }
+                    }
+                }
+            }
+        }
     }
 }
