@@ -30,40 +30,43 @@ namespace DOTOMIANA
         //https://stackoverflow.com/questions/6901070/getting-selected-value-of-a-combobox
 
             ComboBox cmb = (ComboBox)sender;
-            //var selectedIndex = cmb.SelectedIndex;
             int selectedValue = (int)cmb.SelectedValue;
-            //MessageBox.Show(selectedValue.ToString());
-            
-            //MainMenuManager b = new MainMenuManager();
+            ComboBox[] Rad_Pl = { CmbRadiantPlayer1, CmbRadiantPlayer2, CmbRadiantPlayer3, CmbRadiantPlayer4, CmbRadiantPlayer5 };
+
             var item = a.checkTeamAvailable(selectedValue);
 
-            if (item.Count > 1)
+            if (item.Count > 1) // because checkTeam... Add Pls. Select Player
             {
-                a.addComboBox(CmbRadiantPlayer1, item);
-                a.addComboBox(CmbRadiantPlayer2, item);
-                a.addComboBox(CmbRadiantPlayer3, item);
-                a.addComboBox(CmbRadiantPlayer4, item);
-                a.addComboBox(CmbRadiantPlayer5, item);
+                for(int i = 0; i < Rad_Pl.Length; i++)
+                {
+                    a.addComboBox(Rad_Pl[i], item);
+                }
             }
             else
             {
+                if (CmbRadiantTeam.SelectedIndex > 0)
+                {
+                    MessageBox.Show(selectedValue.ToString() + " : This Team Not Available to Select");
+                }
+
                 CmbRadiantTeam.SelectedIndex = 0;
-                CmbRadiantPlayer1.DataSource = null;
-                CmbRadiantPlayer2.DataSource = null;
-                CmbRadiantPlayer3.DataSource = null;
-                CmbRadiantPlayer4.DataSource = null;
-                CmbRadiantPlayer5.DataSource = null;
-                CmbRadiantPlayer1.Items.Clear();
-                CmbRadiantPlayer2.Items.Clear();
-                CmbRadiantPlayer3.Items.Clear();
-                CmbRadiantPlayer4.Items.Clear();
-                CmbRadiantPlayer5.Items.Clear();
-                MessageBox.Show(selectedValue.ToString()+" : This Team Not Available to Select");
+                for (int i = 0; i < Rad_Pl.Length; i++)
+                {
+                    Rad_Pl[i].DataSource = null;
+                    Rad_Pl[i].Items.Clear();
+                }
             }
 
+            // Clear If Other Side Select Team and it's Duplicate
             if (CmbRadiantTeam.SelectedIndex > 0 && CmbTheDireTeam.SelectedIndex > 0)
             {
                 if (CmbRadiantTeam.Text.Equals(CmbTheDireTeam.Text)){
+                    CmbRadiantTeam.SelectedIndex = 0;
+                    for (int i = 0; i < Rad_Pl.Length; i++)
+                    {
+                        Rad_Pl[i].DataSource = null;
+                        Rad_Pl[i].Items.Clear();
+                    }
                     MessageBox.Show("Team : "+ CmbTheDireTeam.Text +" was Selected (The Dire)");
                 }
             }
@@ -157,31 +160,45 @@ namespace DOTOMIANA
         {
             ComboBox cmb = (ComboBox)sender;
             int selectedValue = (int)cmb.SelectedValue;
+            ComboBox[] Dire_Pl = { CmbTheDirePlayer1, CmbTheDirePlayer2, CmbTheDirePlayer3, CmbTheDirePlayer4, CmbTheDirePlayer5 };
 
             var item = a.checkTeamAvailable(selectedValue);
 
-            if (item.Count > 1)
+            if (item.Count > 1) // because checkTeam... Add Pls. Select Player
             {
-                a.addComboBox(CmbTheDirePlayer1, item);
-                a.addComboBox(CmbTheDirePlayer2, item);
-                a.addComboBox(CmbTheDirePlayer3, item);
-                a.addComboBox(CmbTheDirePlayer4, item);
-                a.addComboBox(CmbTheDirePlayer5, item);
+                for (int i = 0; i < Dire_Pl.Length; i++)
+                {
+                    a.addComboBox(Dire_Pl[i], item);
+                }
             }
             else
             {
-                CmbTheDireTeam.SelectedIndex = 0;
-                CmbTheDirePlayer1.DataSource = null;
-                CmbTheDirePlayer2.DataSource = null;
-                CmbTheDirePlayer3.DataSource = null;
-                CmbTheDirePlayer4.DataSource = null;
-                CmbTheDirePlayer5.DataSource = null;
-                CmbTheDirePlayer1.Items.Clear();
-                CmbTheDirePlayer2.Items.Clear();
-                CmbTheDirePlayer3.Items.Clear();
-                CmbTheDirePlayer4.Items.Clear();
-                CmbTheDirePlayer5.Items.Clear();
-                MessageBox.Show(selectedValue.ToString() + " : This Team Not Available to Select");
+                if (CmbRadiantTeam.SelectedIndex > 0)
+                {
+                    MessageBox.Show(selectedValue.ToString() + " : This Team Not Available to Select");
+                }
+
+                CmbRadiantTeam.SelectedIndex = 0;
+                for (int i = 0; i < Dire_Pl.Length; i++)
+                {
+                    Dire_Pl[i].DataSource = null;
+                    Dire_Pl[i].Items.Clear();
+                }
+            }
+
+            // Clear If Other Side Select Team and it's Duplicate
+            if (CmbRadiantTeam.SelectedIndex > 0 && CmbTheDireTeam.SelectedIndex > 0)
+            {
+                if (CmbRadiantTeam.Text.Equals(CmbTheDireTeam.Text))
+                {
+                    CmbRadiantTeam.SelectedIndex = 0;
+                    for (int i = 0; i < Dire_Pl.Length; i++)
+                    {
+                        Dire_Pl[i].DataSource = null;
+                        Dire_Pl[i].Items.Clear();
+                    }
+                    MessageBox.Show("Team : " + CmbTheDireTeam.Text + " was Selected (Radiant)");
+                }
             }
         }
     }
